@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation</title>
+    <link rel = "icon" href="image/wave.ico">
+    <style>
+        @import url(signupCss.css);
+    </style>
+    <script src ="signUp.js"></script>
+    <!--Daum 우편찾기 API-->
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+</head>
+<body>
+   
+    <div id ="#container" class="wrapper">
+        <form method = "post" name="join" id="join">
+            <!--sign up title-->
+        </header>
+
+        <div id="container">
+           <div class="row_group">
+              <div class="userInput">
+                 <h3 class="list">ID *<span id="idError"></span></h3>
+                 <span class="box int_id" ><input type="text" id="id" class="int check"
+                    maxlength="20"></span>
+              </div>
+              <div class="userInput">
+                 <h3 class="list">Password *<span id="pwError"></span></h3>
+                 <span class="box int_id"><input type="password" id="pw" class="int check"
+                    maxlength="20"></span>
+              </div>
+              <div class="userInput">
+                 <h3 class="list">Password *<span id="pwCheckError"></span></h3>
+                 <span class="box int_id"><input type="password" id="pwCheck" class="int check" 
+                    maxlength="20"></span>
+              </div>
+           </div>
+              <div class="row_group">
+              <div class="userInput">
+                 <h3 class="list">Name *<span id="nameError"></span></h3>
+                 <span class="box int_id"><input type="text" id="name" class="int check"
+                    maxlength="20"></span>
+              </div>
+              <div class="userInput">
+                 <h3 class="list">Phone Number *<span id="phoneNumError"></span></h3>
+                 <span class="box int_id"><input type="text" id="phoneNum" class="int check"
+                    maxlength="11"></span>
+              </div>
+              <div class="userInput">
+                 <h3 class="list">
+                    Address *<span id="addressError"></span>
+                 </h3>
+                 <div id="address" class="int_id">
+                 <span>
+                 <input type="text" id="sample4_postcode" class="d_form mini line addressCheck" placeholder="우편번호" readonly>
+                 <input type="button" id="addressButton" class="d_form mini" onclick="sample4_execDaumPostcode()" value="우편번호 찾기" readonly>
+                 </span>
+                 <input type="text" id="sample4_roadAddress" class="d_form mini line" placeholder="도로명주소" readonly>
+                 <input type="text" id="sample4_jibunAddress" class="d_form mini line" placeholder="지번주소" readonly>
+                 <span id="guide" style="color:#999;display:none"></span>
+                 <input type="text" id="sample4_extraAddress" class="d_form mini line" placeholder="참고주소" readonly>
+                 <input type="text" id="sample4_detailAddress" class="d_form mini line addressCheck" placeholder="상세주소" >
+                 </div>
+              </div>
+
+              <div class="userInput">
+                 <h3 class="list">Email *<span id="emailError"></span></h3>
+                 <span class="emailInt" id="emailBox"> <input type="text" id="email" maxlength="20" class="check" > 
+                    <span>  @ </span> 
+                       <select id="mail_Select">
+                          <option>Choice</option>
+                          <option>naver.com</option>
+                          <option>gmail.com</option>
+                          <option>daum.net</option>
+                          <option>hanmail.net</option>
+                          <option>hotmail.com</option>
+                          <option>nate.com</option>
+                          <option>yahoo.co.kr</option>
+                          <option>직접입력</option>
+                       </select>
+                 </span>
+              </div>
+                 <div class="userInput">
+                 <h3 class="list">I agree to theterms&conditions and privacy policy *<span id="consentError"></span></h3>
+              </div>
+              <!-- change the check box -->
+              <label class="select"><input type="radio" id="check" name="check" value="동의">agree</label>
+              </div>
+              <div class="btn_area">
+                 <input type="submit" value="가입하기" id="btnJoin" class="btn_type btn_primary">
+              </div>
+           </div>
+        </div>
+     </form>
+  </div>
+</body>
+</html>
